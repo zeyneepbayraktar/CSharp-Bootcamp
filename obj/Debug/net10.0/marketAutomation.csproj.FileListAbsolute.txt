@@ -1,0 +1,15 @@
+/Users/zeynep/Desktop/marketAutomation/bin/Debug/net10.0/marketAutomation
+/Users/zeynep/Desktop/marketAutomation/bin/Debug/net10.0/marketAutomation.deps.json
+/Users/zeynep/Desktop/marketAutomation/bin/Debug/net10.0/marketAutomation.runtimeconfig.json
+/Users/zeynep/Desktop/marketAutomation/bin/Debug/net10.0/marketAutomation.dll
+/Users/zeynep/Desktop/marketAutomation/bin/Debug/net10.0/marketAutomation.pdb
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.AssemblyInfoInputs.cache
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.AssemblyInfo.cs
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.csproj.CoreCompileInputs.cache
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.sourcelink.json
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.dll
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/refint/marketAutomation.dll
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.pdb
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/marketAutomation.genruntimeconfig.cache
+/Users/zeynep/Desktop/marketAutomation/obj/Debug/net10.0/ref/marketAutomation.dll
