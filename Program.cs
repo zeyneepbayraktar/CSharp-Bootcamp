@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            #region day1 TEMEL MARKET OTOMASYONU
+            #region day1 BASIC MARKET AUTOMATION
             // Console.WriteLine("---WELCOME TO MY MARKET---");
             // Console.WriteLine("--------------------------");
 
@@ -41,7 +41,7 @@
             // Console.WriteLine("--------------------------");
             #endregion
 
-            #region day2 İNDİRİMLİ MARKET VE IF-ELSE MANTIĞI
+            #region day2 DISCOUNTED MARKET AND IF-ELSE LOGIC
 
             Console.WriteLine("---WELCOME TO MY MARKET---");
             Console.WriteLine("--------------------------");
@@ -80,25 +80,25 @@
             }
             else
             {
-                Console.WriteLine("Bir sonraki alisverisinizde %10 indirim kazanmak icin 500 TL barajini gecin!");
+                Console.WriteLine("Reach 500 TL and get a 10% discount on your next purchase!");
                     kdv = totalPrice * 0.20;
                     lastPrice = totalPrice + kdv;
             }
 
-            Console.Write("Odemeyi nasil yapacaksiniz('Nakit icin 1, kredi karti icin 2'yi tuslayiniz'): ");
+            Console.Write("Press 1 for cash, 2 for credit card: ");
             int odeme = int.Parse(Console.ReadLine());
             if (odeme == 1) 
             {
-                Console.WriteLine("Nakit odeme secildi. 5 TL ekstra indirim uygulaniyor.");
+                Console.WriteLine("Cash payment selected. Extra 5 TL discount is applied.");
                 lastPrice = lastPrice - 5;
             }
             else if (odeme == 2)
             {
-                Console.WriteLine("Kredi karti ile ödeme secildi.");
+                Console.WriteLine("Payment by credit card was selected.");
             }
             else 
             {
-                Console.WriteLine("Gecersiz secim yaptiniz, odeme kredi karti olarak isleme alindi.");
+                Console.WriteLine("You made an invalid selection; the payment was processed as a credit card.");
             }
 
 
@@ -109,14 +109,14 @@
             Console.WriteLine("---------------------------");
             if(discountedPrice == 0)
             {
-                Console.WriteLine($"Ara Toplam\t: {totalPrice:0.00} TL");
+                Console.WriteLine($"Subtotal\t: {totalPrice:0.00} TL");
             }
             else
             {
-                Console.WriteLine($"Ara Toplam\t: {discountedPrice:0.00} TL");
+                Console.WriteLine($"Subtotal\t: {discountedPrice:0.00} TL");
             }
-            Console.WriteLine($"KDV (%20)\t: {kdv:0.00} TL");
-            Console.WriteLine($"GENEL TOPLAM\t: {lastPrice:0.00} TL");
+            Console.WriteLine($"VAT (20%)\t: {kdv:0.00} TL");
+            Console.WriteLine($"GRAND TOTAL\t: {lastPrice:0.00} TL");
             Console.WriteLine("--------------------------");
 
 
