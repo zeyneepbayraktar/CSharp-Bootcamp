@@ -123,30 +123,108 @@
 
             #region day3 Unlimited Market and Stock Control
 
+            // Console.WriteLine("---WELCOME TO MY MARKET---");
+            // Console.WriteLine("--------------------------");
+
+            // int i=1;
+            // string itemName = "";
+            // double totalPrice = 0;
+            // while(itemName != "exit" && itemName != "Exit")
+            // {
+            //     Console.Write($"{i}. item name (type exit to quit): ");
+            //     itemName = Console.ReadLine() ?? "";
+            //     if (itemName != "exit" && itemName != "Exit")
+            //     {
+            //         Console.Write($"{itemName} price: ");
+            //         double price = double.Parse(Console.ReadLine() ?? "0");
+        
+            //         Console.Write($"{itemName} count: ");
+            //         int count = int.Parse(Console.ReadLine() ?? "0");
+
+            //         totalPrice += (price * count); 
+            //         i++;
+            //     }
+            // }
+            
+
+            // double discountedPrice=0;
+            // double tax=0;
+            // double lastPrice=0;
+            // if (totalPrice >= 500)
+            // {
+            //     discountedPrice = totalPrice*0.90;
+            //     tax = discountedPrice * 0.20;
+            //     lastPrice = discountedPrice + tax;
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Reach 500 TL and get a 10% discount on your next purchase!");
+            //         tax = totalPrice * 0.20;
+            //         lastPrice = totalPrice + tax;
+            // }
+
+            // Console.Write("Press 1 for cash, 2 for credit card: ");
+            // int paymentMethod = int.Parse(Console.ReadLine() ?? "2");
+            // if (paymentMethod == 1) 
+            // {
+            //     Console.WriteLine("Cash payment selected. Extra 5 TL discount is applied.");
+            //     lastPrice = lastPrice - 5;
+            // }
+            // else if (paymentMethod == 2)
+            // {
+            //     Console.WriteLine("Payment by credit card was selected.");
+            // }
+            // else 
+            // {
+            //     Console.WriteLine("You made an invalid selection; the payment was processed as a credit card.");
+            // }
+
+
+            // Console.WriteLine("---------------------------");
+            // if(discountedPrice == 0)
+            // {
+            //     Console.WriteLine($"Subtotal\t: {totalPrice:0.00} TL");
+            // }
+            // else
+            // {
+            //     Console.WriteLine($"Subtotal\t: {discountedPrice:0.00} TL");
+            // }
+            // Console.WriteLine($"Tax (20%)\t: {tax:0.00} TL");
+            // Console.WriteLine($"GRAND TOTAL\t: {lastPrice:0.00} TL");
+            // Console.WriteLine("--------------------------");
+
+            #endregion
+
+            #region day4 Receipt Management with Arrays
 
             Console.WriteLine("---WELCOME TO MY MARKET---");
             Console.WriteLine("--------------------------");
 
-            int i=1;
-            string itemName = "";
-            double totalPrice = 0;
-            while(itemName != "exit" && itemName != "Exit")
-            {
-                Console.Write($"{i}. item name (type exit to quit): ");
-                itemName = Console.ReadLine() ?? "";
-                if (itemName != "exit" && itemName != "Exit")
-                {
-                    Console.Write($"{itemName} price: ");
-                    double price = double.Parse(Console.ReadLine() ?? "0");
-        
-                    Console.Write($"{itemName} count: ");
-                    int count = int.Parse(Console.ReadLine() ?? "0");
+            Console.Write("How many items will you buy? ");
+            int size = int.Parse(Console.ReadLine());
 
-                    totalPrice += (price * count); 
-                    i++;
-                }
+            string[] items = new string[size];
+            double[] prices = new double[size];
+            int[] count = new int[size];
+            double totalPrice = 0;
+
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write($"\n{i + 1}. Product Entry: ");
+
+                Console.Write("Product name: ");
+                items[i] = Console.ReadLine();
+    
+                Console.Write("Unit Price: ");
+                prices[i] = double.Parse(Console.ReadLine());
+
+                Console.Write("Quantity: ");
+                count[i] = int.Parse(Console.ReadLine());
+
+                totalPrice += count[i]*prices[i];
+
+                
             }
-            
 
             double discountedPrice=0;
             double tax=0;
@@ -179,7 +257,13 @@
             {
                 Console.WriteLine("You made an invalid selection; the payment was processed as a credit card.");
             }
-
+            
+            Console.WriteLine("\n------- MARKET RECEIPT -------");
+            for (int j = 0; j < size; j++)
+            {
+                double itemTotal = prices[j] * count[j];
+                Console.WriteLine($"{items[j]}\t x{count[j]}\t : {itemTotal:0.00} TL");
+            }
 
             Console.WriteLine("---------------------------");
             if(discountedPrice == 0)
@@ -195,6 +279,7 @@
             Console.WriteLine("--------------------------");
 
             #endregion
+
         }
     }
 }
